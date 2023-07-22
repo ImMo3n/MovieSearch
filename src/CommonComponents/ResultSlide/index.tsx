@@ -1,0 +1,1 @@
+export { ResultSlide } from "./ResultSlide";
