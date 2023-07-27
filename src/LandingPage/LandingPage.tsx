@@ -4,6 +4,8 @@ import { styled } from "styled-components";
 import { Trending } from "./Trending";
 
 export const LandingPage = () => {
+  document.title = "Home | MovieSearch";
+
   return (
     <Wrapper>
       <NowPlaying />

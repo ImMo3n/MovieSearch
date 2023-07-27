@@ -50,6 +50,8 @@ export const SearchPage = () => {
     resultObject = movieResult;
   }
 
+  document.title = `Searching for '${searchTerm}' | MovieSearch`;
+
   return (
     <>
       <SelectCategories

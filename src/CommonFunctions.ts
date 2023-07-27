@@ -18,26 +18,12 @@ export const getBackdropURL = (imgPath: string | null) => {
   return backdropURL.toString();
 };
 
-export function prefersDarkMode() {
-  return (
-    window.matchMedia &&
-    window.matchMedia("(prefers-color-scheme: dark)").matches
-  );
-}
-
-// export function getPreferredTheme() {
-//   if (prefersDarkMode() === true) return Theme.dark;
-//   return Theme.light;
-// }
-
 export function getTimeAgo(date: Date) {
   const currentDate = new Date();
   const inputDate = new Date(date);
 
-  // Calculate the difference in milliseconds
   const timeDiff = currentDate.getTime() - inputDate.getTime();
 
-  // Convert milliseconds to days, months, and years
   const daysDiff = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
   const monthsDiff = Math.floor(daysDiff / 30);
   const yearsDiff = Math.floor(daysDiff / 365);

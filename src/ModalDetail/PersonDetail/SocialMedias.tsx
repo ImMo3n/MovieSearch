@@ -20,7 +20,7 @@ export const SocialMedias = ({
   return (
     <Wrapper>
       {socialMediaObject
-        .filter(({ id }) => id)
+        .filter(({ id }) => socialMedias[id as keyof typeof socialMedias])
         .map(({ baseURL, id, icon: SocialMediaIcon }) => (
           <SocialMedia key={id}>
             <a
@@ -77,17 +77,3 @@ const socialMediaObject = [
     icon: () => <FaTwitterSquare />,
   },
 ];
-
-// const socialMedias = {
-//   id: 74568,
-//   freebase_mid: "/m/04jnqj",
-//   freebase_id: "/en/chris_hemsworth",
-//   imdb_id: "nm1165110",
-//   tvrage_id: 126575,
-//   wikidata_id: "Q54314",
-//   facebook_id: "chrishemsworth",
-//   instagram_id: "chrishemsworth",
-//   tiktok_id: "chrishemsworth",
-//   twitter_id: "chrishemsworth",
-//   youtube_id: "ChrisHemsworth",
-// };

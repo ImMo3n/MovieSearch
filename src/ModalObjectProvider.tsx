@@ -1,3 +1,4 @@
+/* eslint-disable react-refresh/only-export-components */
 import { createContext, useContext, useState } from "react";
 import { ModalType } from "./Types";
 
@@ -7,12 +8,10 @@ const UpdateModalContext = createContext((modal: ModalType | null) => {
   return;
 });
 
-// eslint-disable-next-line react-refresh/only-export-components
 export const useModalObject = () => {
   return useContext(SelectedModalContext);
 };
 
-// eslint-disable-next-line react-refresh/only-export-components
 export const useUpdateModalObject = () => {
   return useContext(UpdateModalContext);
 };
